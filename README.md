@@ -1,6 +1,6 @@
 ## QR Demo
 
-Demo app for printing QR Codes.
+Demo app for QR codes and barcodes in ERPNext print formats.
 
 This app contains a DocType **QR Demo**. You can create a new **QR Demo**, fill the _Title_ field and save.
 
@@ -46,3 +46,12 @@ jinja = {
 
 ### Print PDF
 ![Form: saved QR Demo](img/print_pdf.png)
+
+### Barcode
+
+A Code 128 barcode can be printed as follows:
+
+```jinja
+<p>Barcode:</p>
+{{ get_barcode_svg(data="Test123", module_width_mm=0.2, module_height_mm=15.0) }}
+```
