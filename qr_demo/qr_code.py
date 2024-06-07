@@ -4,7 +4,7 @@ from io import BytesIO
 import qrcode
 
 
-def get_qr_code(data: str) -> str:
+def get_generate_qr_code(data: str) -> str:
 	qr_code_bytes = get_qr_code_bytes(data, format="PNG")
 	base_64_string = bytes_to_base64_string(qr_code_bytes)
 
