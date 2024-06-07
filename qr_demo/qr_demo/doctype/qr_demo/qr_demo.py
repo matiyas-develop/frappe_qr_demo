@@ -2,9 +2,9 @@
 # For license information, please see license.txt
 from frappe.model.document import Document
 
-from qr_demo.qr_code import get_qr_code
+from qr_demo.qr_code import get_generate_qr_code
 
 
 class QRDemo(Document):
 	def validate(self):
-		self.qr_code = get_qr_code(self.title)
+		self.qr_code = get_generate_qr_code(self.title)
